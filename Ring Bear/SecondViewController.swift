@@ -12,7 +12,9 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tabBarController?.title = "Test"
+        self.navigationController?.title = "Guest List"
     }
 
     override func didReceiveMemoryWarning() {
