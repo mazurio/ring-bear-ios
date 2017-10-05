@@ -88,25 +88,6 @@
             </objects>
             <point key="canvasLocation" x="1482" y="346"/>
         </scene>
-        <!--Add Guest-->
-        <scene sceneID="8uO-k9-uGp">
-            <objects>
-                <viewController storyboardIdentifier="ThirdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8N-DP-Fa8" customClass="ThirdViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h6p-5P-ZUQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="kct-vD-qL0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hs9-nL-ceE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Guest" id="zy7-ZL-6D3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qwj-18-QDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3536.8000000000002" y="77.811094452773617"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -144,24 +125,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo7-gn-ATU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="346"/>
-        </scene>
-        <!--Third View Navigation Controller-->
-        <scene sceneID="g1K-Xn-wTT">
-            <objects>
-                <navigationController storyboardIdentifier="ThirdViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EMP-WW-hv1" customClass="ThirdViewNavigationController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9tR-8f-iMu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="f8N-DP-Fa8" kind="relationship" relationship="rootViewController" id="00E-HW-8cm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tZI-vy-Yfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2597.5999999999999" y="77.811094452773617"/>
         </scene>
     </scenes>
     <resources>

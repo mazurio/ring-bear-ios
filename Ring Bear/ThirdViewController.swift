@@ -11,6 +11,8 @@ import UIKit
 class ThirdViewNavigationController : UINavigationController {}
 
 class ThirdViewController : UIViewController {
+    var currentGuest: Guest? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
