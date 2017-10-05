@@ -13,11 +13,15 @@ class ThirdViewNavigationController : UINavigationController {}
 class ThirdViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(barButtonItemClicked))
+        
+        self.navigationItem.setLeftBarButton(closeButton, animated: true)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension ThirdViewController {
+    func barButtonItemClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

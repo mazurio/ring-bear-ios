@@ -82,9 +82,7 @@
                             <outlet property="delegate" destination="S86-7d-zxf" id="sHf-nO-J0A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GtE-7O-AFo">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="c2m-6j-wH5"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="GtE-7O-AFo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkK-5x-sjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,10 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Guest" id="zy7-ZL-6D3">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hak-5T-toJ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PLy-4n-6D5"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Guest" id="zy7-ZL-6D3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwj-18-QDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
