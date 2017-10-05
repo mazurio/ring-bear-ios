@@ -1,9 +1,5 @@
-//import RealmSwift
+import RealmSwift
 
-class Guest {
-    var name = ""
-    
-    init(name: String) {
-        self.name = name
-    }
+class Guest: Object {
+    dynamic var name = ""
 }

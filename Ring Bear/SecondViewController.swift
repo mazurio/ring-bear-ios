@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SecondViewController: UITableViewController {
-    let listOfGuests = [
-        Guest(name: "Damian"),
-        Guest(name: "Marek")
-    ]
+    
+    let listOfGuests = try! Realm().objects(Guest.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +49,27 @@ extension SecondViewController {
         
         let controller = destination.topViewController as! ThirdViewController
         
-        let guest = listOfGuests[indexPath.row]
-        controller.currentGuest = guest
+//        let guest = listOfGuests[indexPath.row]
+//        controller.currentGuest = guest
         
         navigationController?.present(destination, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let guestToBeDeleted = listOfGuests[indexPath.row]
+            
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(guestToBeDeleted)
+            }
+        
+            tableView.reloadData()
+        }
     }
 }
 
@@ -64,6 +80,10 @@ extension SecondViewController {
             withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
         
         let controller = destination.topViewController as! ThirdViewController
+        
+        controller.onComplete() { () in
+            self.tableView.reloadData()
+        }
         
         navigationController?.present(destination, animated: true, completion: nil)
     }

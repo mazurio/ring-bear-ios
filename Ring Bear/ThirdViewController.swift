@@ -8,11 +8,15 @@
 
 import UIKit
 import Eureka
+import RealmSwift
 
 class ThirdViewNavigationController : UINavigationController {}
 
 class ThirdViewController : FormViewController {
-    var currentGuest: Guest? = nil
+    typealias typeCompletionHandler = () -> ()
+    var completion: typeCompletionHandler = {}
+    
+    var currentGuest: Guest = Guest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,10 @@ class ThirdViewController : FormViewController {
         self.navigationItem.setLeftBarButton(cancelButton, animated: true)
         self.navigationItem.setRightBarButton(saveButton, animated: true)
     }
+    
+    func onComplete(completionHandler: @escaping typeCompletionHandler) {
+        self.completion = completionHandler
+    }
 }
 
 extension ThirdViewController {
@@ -35,7 +43,9 @@ extension ThirdViewController {
                 $0.title = "Name"
                 $0.placeholder = "e.g. Jon"
                 $0.onChange { [unowned self] row in
-                    // self.viewModel.title = row.value
+                    if let name = row.value {
+                        self.currentGuest.name = name
+                    }
                 }
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChange
@@ -72,6 +82,14 @@ extension ThirdViewController {
     
     func save() {
         if form.validate().isEmpty {
+            let realm = try! Realm()
+            
+            try! realm.write {
+                realm.add(currentGuest)
+            }
+
+            self.dismiss(animated: true, completion: completion)
+
             print("saving!!!")
         } else {
             print("NOT VALID")
