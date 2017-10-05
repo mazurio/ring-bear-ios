@@ -16,6 +16,9 @@ class SecondViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let addGuestButton = UIBarButtonItem(title: "Add Guest", style: .plain, target: self, action: #selector(addGuest))
+        self.navigationItem.setRightBarButton(addGuestButton, animated: true)
     }
 }
 
@@ -54,3 +57,14 @@ extension SecondViewController {
     }
 }
 
+extension SecondViewController {
+    func addGuest() {
+        let storyboard = UIStoryboard(name: "AddEditGuest", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(
+            withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
+        
+        let controller = destination.topViewController as! ThirdViewController
+        
+        navigationController?.present(destination, animated: true, completion: nil)
+    }
+}
