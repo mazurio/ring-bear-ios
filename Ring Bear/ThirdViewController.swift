@@ -1,11 +1,3 @@
-//
-//  ThirdViewController.swift
-//  Ring Bear
-//
-//  Created by Damian Mazurkiewicz on 05/10/2017.
-//  Copyright © 2017 Damian Mazurkiewicz. All rights reserved.
-//
-
 import UIKit
 import Eureka
 import RealmSwift
@@ -41,10 +33,14 @@ extension ThirdViewController {
             +++ Section()
             <<< TextRow() {
                 $0.title = "Name"
+                $0.value = self.currentGuest.name
                 $0.placeholder = "e.g. Jon"
                 $0.onChange { [unowned self] row in
                     if let name = row.value {
-                        self.currentGuest.name = name
+                        let realm = try! Realm()
+                        try! realm.write {
+                            self.currentGuest.name = name
+                        }
                     }
                 }
                 $0.add(rule: RuleRequired())
@@ -55,25 +51,8 @@ extension ThirdViewController {
                     }
                 }
             }
-            +++ Section()
-            <<< PushRow<String>() {
-                $0.title = "Repeats"
-                $0.options = ["1", "2"]
-                $0.onChange { [unowned self] row in
-                    
-                }
-            }
-            +++ Section()
-            <<< SegmentedRow<String>() {
-                $0.title = "Priority"
-                $0.options = ["!", "!!", "!!!"]
-                $0.onChange { [unowned self] row in
-                    
-                }
-        }
     }
 }
-
 
 extension ThirdViewController {
     func cancel() {
@@ -82,6 +61,8 @@ extension ThirdViewController {
     
     func save() {
         if form.validate().isEmpty {
+            print("valid?")
+            
             let realm = try! Realm()
             
             try! realm.write {

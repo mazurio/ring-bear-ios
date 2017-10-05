@@ -11,7 +11,9 @@ import RealmSwift
 
 class SecondViewController: UITableViewController {
     
-    let listOfGuests = try! Realm().objects(Guest.self)
+    func listOfGuests() -> Results<Guest> {
+        return try! Realm().objects(Guest.self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +29,13 @@ extension SecondViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfGuests.count
+        return listOfGuests().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
         
-        let guest = listOfGuests[indexPath.row]
+        let guest = listOfGuests()[indexPath.row]
         
         cell.textLabel?.text = "\(guest.name)"
         
@@ -49,8 +51,11 @@ extension SecondViewController {
         
         let controller = destination.topViewController as! ThirdViewController
         
-//        let guest = listOfGuests[indexPath.row]
-//        controller.currentGuest = guest
+        let guest = listOfGuests()[indexPath.row]
+        controller.currentGuest = guest
+        controller.onComplete() { () in
+            self.reloadData()
+        }
         
         navigationController?.present(destination, animated: true, completion: nil)
     }
@@ -61,14 +66,14 @@ extension SecondViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            let guestToBeDeleted = listOfGuests[indexPath.row]
+            let guestToBeDeleted = listOfGuests()[indexPath.row]
             
             let realm = try! Realm()
             try! realm.write {
                 realm.delete(guestToBeDeleted)
             }
         
-            tableView.reloadData()
+            self.reloadData()
         }
     }
 }
@@ -80,11 +85,16 @@ extension SecondViewController {
             withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
         
         let controller = destination.topViewController as! ThirdViewController
-        
         controller.onComplete() { () in
-            self.tableView.reloadData()
+            self.reloadData()
         }
         
         navigationController?.present(destination, animated: true, completion: nil)
+    }
+    
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
