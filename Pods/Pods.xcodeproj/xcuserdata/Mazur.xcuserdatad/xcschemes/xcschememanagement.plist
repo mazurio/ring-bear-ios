@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Ring Bear.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Ring BearTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Ring BearUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>295873BCC6588160995E18498E205825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5DA90D719010FDCB5A07CF9DDD65FA95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>855CC188AFD866E1AA3A54047BB2245A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5499DDD6807ECC22B9A60D135408967</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2A9FED289338B421FE81A915E44212A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
