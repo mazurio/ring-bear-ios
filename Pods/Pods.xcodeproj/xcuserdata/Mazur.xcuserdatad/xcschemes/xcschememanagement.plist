@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Ring Bear.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>295873BCC6588160995E18498E205825</key>
+		<key>0AA8DD2B8A2E8BC76E16B1EFB490A6B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DA90D719010FDCB5A07CF9DDD65FA95</key>
+		<key>5E3D45BBF9352888DDB6D8168C8BC44F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>675A114988AE198732ED4AD726408964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5499DDD6807ECC22B9A60D135408967</key>
+		<key>C2A9FED289338B421FE81A915E44212A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2A9FED289338B421FE81A915E44212A</key>
+		<key>D62F76F3EBE087BC18F2D38BEDB574B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

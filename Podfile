@@ -7,6 +7,7 @@ target 'Ring Bear' do
 
   # Pods for Ring Bear
   pod 'RealmSwift'
+  pod 'Eureka', '~> 3.0.0'
 
   target 'Ring BearTests' do
     inherit! :search_paths
