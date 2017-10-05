@@ -14,14 +14,20 @@ class ThirdViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(barButtonItemClicked))
+        let cancelButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(cancel))
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
         
-        self.navigationItem.setLeftBarButton(closeButton, animated: true)
+        self.navigationItem.setLeftBarButton(cancelButton, animated: true)
+        self.navigationItem.setRightBarButton(saveButton, animated: true)
     }
 }
 
 extension ThirdViewController {
-    func barButtonItemClicked() {
+    func cancel() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func save() {
+        print("save")
     }
 }
