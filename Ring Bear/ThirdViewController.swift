@@ -6,6 +6,7 @@ class ThirdViewNavigationController : UINavigationController {}
 
 class ThirdViewController : FormViewController {
     typealias typeCompletionHandler = () -> ()
+    
     var completion: typeCompletionHandler = {}
     
     var currentGuest: Guest = Guest()
@@ -15,8 +16,19 @@ class ThirdViewController : FormViewController {
         
         self.createForm()
         
-        let cancelButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(cancel))
-        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        let cancelButton = UIBarButtonItem(
+            title: "Close",
+            style: .plain,
+            target: self,
+            action: #selector(cancel)
+        )
+        
+        let saveButton = UIBarButtonItem(
+            title: "Save",
+            style: .plain,
+            target: self,
+            action: #selector(save)
+        )
         
         self.navigationItem.setLeftBarButton(cancelButton, animated: true)
         self.navigationItem.setRightBarButton(saveButton, animated: true)

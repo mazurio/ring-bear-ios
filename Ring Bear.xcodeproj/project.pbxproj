@@ -129,8 +129,8 @@
 				734E97901F86BBF70017C630 /* Guest.swift */,
 				736299601F643AB200B95AE9 /* Main.storyboard */,
 				734E97921F86BDF90017C630 /* AddEditGuest.storyboard */,
-				736299631F643AB200B95AE9 /* Assets.xcassets */,
 				736299651F643AB200B95AE9 /* LaunchScreen.storyboard */,
+				736299631F643AB200B95AE9 /* Assets.xcassets */,
 				736299681F643AB200B95AE9 /* Info.plist */,
 			);
 			path = "Ring Bear";

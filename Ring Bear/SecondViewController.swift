@@ -20,7 +20,13 @@ class SecondViewController: UITableViewController {
         
         self.title = "Guest List"
         
-        let addGuestButton = UIBarButtonItem(title: "Add Guest", style: .plain, target: self, action: #selector(addGuest))
+        let addGuestButton = UIBarButtonItem(
+            image: UIImage(named: "add_guest")?.withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(addGuest)
+        )
+        
         self.navigationItem.setRightBarButton(addGuestButton, animated: true)
     }
 }
