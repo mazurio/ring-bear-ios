@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--Title-->
+        <!--Second View Controller-->
         <scene sceneID="0xu-bb-iLC">
             <objects>
                 <tableViewController id="S86-7d-zxf" customClass="SecondViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,11 +82,30 @@
                             <outlet property="delegate" destination="S86-7d-zxf" id="sHf-nO-J0A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GtE-7O-AFo"/>
+                    <navigationItem key="navigationItem" id="GtE-7O-AFo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkK-5x-sjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="346"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ppc-KY-mu3">
+            <objects>
+                <viewController id="KSs-rH-qwc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eyE-6j-2XG"/>
+                        <viewControllerLayoutGuide type="bottom" id="4PQ-Fr-yyO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DHc-3W-BSc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VGf-PE-umZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBx-sb-MpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="1024"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -100,17 +119,18 @@
                     <connections>
                         <segue destination="zuV-f9-7jO" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="lcV-ce-7b3" kind="relationship" relationship="viewControllers" id="c95-WC-YjG"/>
+                        <segue destination="MDE-I3-3D0" kind="relationship" relationship="viewControllers" id="MfN-l0-EGV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-374" y="186"/>
         </scene>
         <!--Guest List-->
         <scene sceneID="ONq-4Q-EXV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcV-ce-7b3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Guest List" image="guest_list" id="2iS-VT-w99"/>
+                    <tabBarItem key="tabBarItem" title="Guest List" image="GuestList" id="2iS-VT-w99"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AIS-T9-KhB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -126,11 +146,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="346"/>
         </scene>
-        <!--Our Wedding-->
+        <!--Home-->
         <scene sceneID="hk9-6p-ztS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuV-f9-7jO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Our Wedding" image="our_wedding" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ojq-dU-GRl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -146,9 +166,30 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="Cvp-0q-YLl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MDE-I3-3D0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="u1w-EL-Lf3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mqh-cX-A1w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KSs-rH-qwc" kind="relationship" relationship="rootViewController" id="jcp-hg-F9M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07l-51-QwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1024"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="guest_list" width="22" height="22"/>
-        <image name="our_wedding" width="22" height="22"/>
+        <image name="GuestList" width="22" height="22"/>
+        <image name="Home" width="22" height="22"/>
+        <image name="Settings" width="22" height="22"/>
     </resources>
 </document>
