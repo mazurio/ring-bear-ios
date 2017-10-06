@@ -18,6 +18,8 @@ class SecondViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Guest List"
+        
         let addGuestButton = UIBarButtonItem(title: "Add Guest", style: .plain, target: self, action: #selector(addGuest))
         self.navigationItem.setRightBarButton(addGuestButton, animated: true)
     }
@@ -37,7 +39,7 @@ extension SecondViewController {
         
         let guest = listOfGuests()[indexPath.row]
         
-        cell.textLabel?.text = "\(guest.name)"
+        cell.textLabel?.text = "\(guest.name) \(guest.surname)"
         
         return cell
     }
