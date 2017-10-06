@@ -16,6 +16,14 @@ class GuestListViewController: UITableViewController {
         
         self.navigationItem.setRightBarButton(addGuestButton, animated: true)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("guest list appear")
+        
+        self.reloadData()
+    }
 }
 
 extension GuestListViewController {
@@ -49,9 +57,6 @@ extension GuestListViewController {
         let guest = listOfGuests()[indexPath.row]
         controller.currentGuest = guest
         controller.title = "Edit Guest"
-        controller.onComplete() { () in
-            self.reloadData()
-        }
         
         navigationController?.present(destination, animated: true, completion: nil)
     }
@@ -86,9 +91,6 @@ extension GuestListViewController {
         
         let controller = destination.topViewController as! AddEditGuestViewController
         controller.title = "Add Guest"
-        controller.onComplete() { () in
-            self.reloadData()
-        }
         
         navigationController?.present(destination, animated: true, completion: nil)
     }

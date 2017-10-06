@@ -6,5 +6,11 @@ class HomeViewController: UIViewController {
         
         self.title = "Home"
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("appear")
+    }
 }
 

@@ -5,10 +5,6 @@ import RealmSwift
 class AddEditGuestViewNavigationController : UINavigationController {}
 
 class AddEditGuestViewController : FormViewController {
-    typealias typeCompletionHandler = () -> ()
-    
-    var completion: typeCompletionHandler = {}
-    
     var currentGuest: Guest = Guest()
 
     override func viewDidLoad() {
@@ -32,10 +28,6 @@ class AddEditGuestViewController : FormViewController {
         
         self.navigationItem.setLeftBarButton(cancelButton, animated: true)
         self.navigationItem.setRightBarButton(saveButton, animated: true)
-    }
-    
-    func onComplete(completionHandler: @escaping typeCompletionHandler) {
-        self.completion = completionHandler
     }
 }
 
@@ -141,19 +133,13 @@ extension AddEditGuestViewController {
     
     func save() {
         if form.validate().isEmpty {
-            print("valid?")
-            
             let realm = try! Realm()
             
             try! realm.write {
                 realm.add(currentGuest)
             }
 
-            self.dismiss(animated: true, completion: completion)
-
-            print("saving!!!")
-        } else {
-            print("NOT VALID")
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
