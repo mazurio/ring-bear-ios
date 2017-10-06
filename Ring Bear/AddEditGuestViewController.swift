@@ -2,9 +2,9 @@ import UIKit
 import Eureka
 import RealmSwift
 
-class ThirdViewNavigationController : UINavigationController {}
+class AddEditGuestViewNavigationController : UINavigationController {}
 
-class ThirdViewController : FormViewController {
+class AddEditGuestViewController : FormViewController {
     typealias typeCompletionHandler = () -> ()
     
     var completion: typeCompletionHandler = {}
@@ -39,7 +39,7 @@ class ThirdViewController : FormViewController {
     }
 }
 
-extension ThirdViewController {
+extension AddEditGuestViewController {
     func createForm() {
         form
             +++ Section()
@@ -134,7 +134,7 @@ extension ThirdViewController {
     }
 }
 
-extension ThirdViewController {
+extension AddEditGuestViewController {
     func cancel() {
         self.dismiss(animated: true, completion: nil)
     }

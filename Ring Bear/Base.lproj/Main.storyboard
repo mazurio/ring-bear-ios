@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="HomeViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Guest List View Controller-->
         <scene sceneID="0xu-bb-iLC">
             <objects>
-                <tableViewController id="S86-7d-zxf" customClass="SecondViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GuestListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S86-7d-zxf" customClass="GuestListViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="I8a-Ng-BPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1689" y="346"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Ppc-KY-mu3">
             <objects>
-                <viewController id="KSs-rH-qwc" sceneMemberID="viewController">
+                <viewController id="KSs-rH-qwc" customClass="SettingsViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eyE-6j-2XG"/>
                         <viewControllerLayoutGuide type="bottom" id="4PQ-Fr-yyO"/>

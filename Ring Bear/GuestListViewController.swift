@@ -1,16 +1,7 @@
-//
-//  SecondViewController.swift
-//  Ring Bear
-//
-//  Created by Damian Mazurkiewicz on 09/09/2017.
-//  Copyright © 2017 Damian Mazurkiewicz. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 
-class SecondViewController: UITableViewController {
-    
+class GuestListViewController: UITableViewController {
     func listOfGuests() -> Results<Guest> {
         return try! Realm().objects(Guest.self)
     }
@@ -31,7 +22,7 @@ class SecondViewController: UITableViewController {
     }
 }
 
-extension SecondViewController {
+extension GuestListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,9 +46,9 @@ extension SecondViewController {
 
         let storyboard = UIStoryboard(name: "AddEditGuest", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(
-            withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
+            withIdentifier: "AddEditGuestViewNavigationController") as! AddEditGuestViewNavigationController
         
-        let controller = destination.topViewController as! ThirdViewController
+        let controller = destination.topViewController as! AddEditGuestViewController
         
         let guest = listOfGuests()[indexPath.row]
         controller.currentGuest = guest
@@ -87,13 +78,13 @@ extension SecondViewController {
     }
 }
 
-extension SecondViewController {
+extension GuestListViewController {
     func addGuest() {
         let storyboard = UIStoryboard(name: "AddEditGuest", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(
-            withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
+            withIdentifier: "AddEditGuestViewNavigationController") as! AddEditGuestViewNavigationController
         
-        let controller = destination.topViewController as! ThirdViewController
+        let controller = destination.topViewController as! AddEditGuestViewController
         controller.title = "Add Guest"
         controller.onComplete() { () in
             self.reloadData()

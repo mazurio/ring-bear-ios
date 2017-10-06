@@ -12,7 +12,7 @@
         <!--Add Guest-->
         <scene sceneID="aKp-20-GWa">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XYy-cJ-P89" customClass="ThirdViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEditGuestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XYy-cJ-P89" customClass="AddEditGuestViewController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uxu-ya-C2I"/>
                         <viewControllerLayoutGuide type="bottom" id="Wcb-pa-VSM"/>
@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="4476" y="77.811094452773617"/>
         </scene>
-        <!--Third View Navigation Controller-->
+        <!--Add Edit Guest View Navigation Controller-->
         <scene sceneID="fed-6w-6gN">
             <objects>
-                <navigationController storyboardIdentifier="ThirdViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Txm-oV-ycY" customClass="ThirdViewNavigationController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddEditGuestViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Txm-oV-ycY" customClass="AddEditGuestViewNavigationController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oky-FW-HP1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
