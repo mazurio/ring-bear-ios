@@ -53,6 +53,7 @@ extension SecondViewController {
         
         let guest = listOfGuests()[indexPath.row]
         controller.currentGuest = guest
+        controller.title = "Edit Guest"
         controller.onComplete() { () in
             self.reloadData()
         }
@@ -85,6 +86,7 @@ extension SecondViewController {
             withIdentifier: "ThirdViewNavigationController") as! ThirdViewNavigationController
         
         let controller = destination.topViewController as! ThirdViewController
+        controller.title = "Add Guest"
         controller.onComplete() { () in
             self.reloadData()
         }
