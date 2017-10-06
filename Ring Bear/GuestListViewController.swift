@@ -2,10 +2,6 @@ import UIKit
 import RealmSwift
 
 class GuestListViewController: UITableViewController {
-    func listOfGuests() -> Results<Guest> {
-        return try! Realm().objects(Guest.self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,6 +75,10 @@ extension GuestListViewController {
 }
 
 extension GuestListViewController {
+    func listOfGuests() -> Results<Guest> {
+        return try! Realm().objects(Guest.self)
+    }
+    
     func addGuest() {
         let storyboard = UIStoryboard(name: "AddEditGuest", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(
