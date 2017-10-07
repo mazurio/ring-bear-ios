@@ -32,7 +32,15 @@ extension GuestListViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfGuests().count
+        let count = listOfGuests().count
+        
+        if count == 0 {
+            self.tableView.setEmptyMessage("Start your guest list by inviting your first guest with the '+' button.")
+        } else {
+            self.tableView.restore()
+        }
+        
+        return count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
