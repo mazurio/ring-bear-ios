@@ -5,6 +5,8 @@ import RealmSwift
 class AddEditGuestViewNavigationController : UINavigationController {}
 
 class AddEditGuestViewController : FormViewController {
+    let realm = try! Realm()
+    
     var currentGuest: Guest = Guest()
 
     override func viewDidLoad() {
@@ -41,8 +43,7 @@ extension AddEditGuestViewController {
                 $0.placeholder = "Jon"
                 $0.onChange { [unowned self] row in
                     if let name = row.value {
-                        let realm = try! Realm()
-                        try! realm.write {
+                        try! self.realm.write {
                             self.currentGuest.name = name
                         }
                     }
@@ -61,8 +62,7 @@ extension AddEditGuestViewController {
                 $0.placeholder = "Snow"
                 $0.onChange { [unowned self] row in
                     if let surname = row.value {
-                        let realm = try! Realm()
-                        try! realm.write {
+                        try! self.realm.write {
                             self.currentGuest.surname = surname
                         }
                     }
@@ -75,25 +75,24 @@ extension AddEditGuestViewController {
                     }
                 }
             }
-            <<< PhoneRow() {
-                $0.title = "Phone"
-                $0.onChange { [unowned self] row in
-                    if let phone = row.value {
-                        let realm = try! Realm()
-                        try! realm.write {
-                            self.currentGuest.phone = phone
-                        }
-                    }
-                }
-            }
             +++ Section()
             <<< PushRow<String>() {
                 $0.title = "Relationship"
-                $0.value = "Mutual Guest"
+                $0.value = self.relationshipToTitle()
                 $0.options = ["Mutual Guest", "Bride", "Groom"]
                 $0.onChange { [unowned self] row in
                     if let value = row.value {
-                        //
+                        try! self.realm.write {
+                            if value == "Mutual Guest" {
+                                self.currentGuest.relationship = "mutual"
+                            } else if value == "Bride" {
+                                self.currentGuest.relationship = "bride"
+                            } else if value == "Groom" {
+                                self.currentGuest.relationship = "groom"
+                            } else {
+                                self.currentGuest.relationship = ""
+                            }
+                        }
                     }
                 }
             }
@@ -103,8 +102,7 @@ extension AddEditGuestViewController {
                 $0.value = self.currentGuest.invited
                 $0.onChange { [unowned self] row in
                     if let invited = row.value {
-                        let realm = try! Realm()
-                        try! realm.write {
+                        try! self.realm.write {
                             self.currentGuest.invited = invited
                         }
                     }
@@ -115,8 +113,7 @@ extension AddEditGuestViewController {
                 $0.value = self.currentGuest.acceptedInvitation
                 $0.onChange { [unowned self] row in
                     if let acceptedInvitation = row.value {
-                        let realm = try! Realm()
-                        try! realm.write {
+                        try! self.realm.write {
                             self.currentGuest.acceptedInvitation = acceptedInvitation
                         }
                     }
@@ -133,13 +130,21 @@ extension AddEditGuestViewController {
     
     func save() {
         if form.validate().isEmpty {
-            let realm = try! Realm()
-            
             try! realm.write {
                 realm.add(currentGuest)
             }
 
             self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func relationshipToTitle() -> String {
+        if self.currentGuest.relationship == "groom" {
+            return "Groom"
+        } else if self.currentGuest.relationship == "bride" {
+            return "Bride"
+        } else {
+            return "Mutual Guest"
         }
     }
 }
