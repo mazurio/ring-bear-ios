@@ -6,5 +6,5 @@ class Guest: Object {
     
     dynamic var invited = false
     dynamic var acceptedInvitation = false
-    dynamic var relationship = ""
+    dynamic var relationship = "mutual"
 }

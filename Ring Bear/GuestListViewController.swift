@@ -2,6 +2,8 @@ import UIKit
 import RealmSwift
 
 class GuestListViewController: UITableViewController {
+    let realm = try! Realm()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,8 +21,6 @@ class GuestListViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        print("guest list appear")
         
         self.reloadData()
     }
@@ -81,7 +81,9 @@ extension GuestListViewController {
 
 extension GuestListViewController {
     func listOfGuests() -> Results<Guest> {
-        return try! Realm().objects(Guest.self)
+        return realm
+            .objects(Guest.self)
+            .sorted(byKeyPath: "name")
     }
     
     func addGuest() {

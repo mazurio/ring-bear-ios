@@ -193,9 +193,9 @@ extension HomeViewController {
             numberOfInvitedGuestsRow?.value = "\(self.numberOfInvitedGuests())"
             numberOfInvitedGuestsRow?.updateCell()
 
-            let numberOfMutualGuestsRow: TextRow? = self.form.rowBy(tag: "numberOfMutualGuests")
-            numberOfMutualGuestsRow?.value = "\(self.numberOfMutualGuests())"
-            numberOfMutualGuestsRow?.updateCell()
+            let numberOfMutualGuestsRow: TextRow = self.form.rowBy(tag: "numberOfMutualGuests")!
+            numberOfMutualGuestsRow.value = "\(self.numberOfMutualGuests())"
+            numberOfMutualGuestsRow.updateCell()
             
             let numberOfGuestsOfTheBrideRow: TextRow? = self.form.rowBy(tag: "numberOfGuestsOfTheBride")
             numberOfGuestsOfTheBrideRow?.value = "\(self.numberOfGuestsOfTheBride())"
