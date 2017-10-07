@@ -72,21 +72,28 @@ extension HomeViewController {
                         try! self.realm.write {
                             s.groomName = name
                         }
-                        
-                        self.reloadData()
                     } else {
                         try! self.realm.write {
                             s.groomName = ""
                         }
-                        
-                        self.reloadData()
                     }
+                    
+                    self.reloadData()
                 }
             }
             +++ Section("Wedding")
             <<< DateRow() {
                 $0.title = "Date of the Wedding"
-                $0.value = Date(timeIntervalSinceReferenceDate: 0)
+                $0.value = weddingDateLabel(settings: s)
+                $0.onChange { [unowned self] row in
+                    if let date = row.value {
+                        try! self.realm.write {
+                            s.weddingDate = date
+                        }
+                    }
+                    
+                    self.reloadData()
+                }
             }
             +++ Section("Guests")
             <<< TextRow("numberOfGuests") {
@@ -140,6 +147,14 @@ extension HomeViewController {
             }
             
             return s
+        }
+    }
+    
+    func weddingDateLabel(settings: Settings) -> Date {
+        if let weddingDate = settings.weddingDate {
+            return weddingDate
+        } else {
+            return Date(timeIntervalSinceReferenceDate: 0)
         }
     }
     
