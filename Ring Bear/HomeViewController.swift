@@ -80,24 +80,24 @@ extension HomeViewController {
                 $0.title = "Date of the Wedding"
                 $0.value = Date(timeIntervalSinceReferenceDate: 0)
             }
-            +++ Section("Statistics")
+            +++ Section("Guests")
             <<< TextRow() {
-                $0.title = "Number of invited guests"
+                $0.title = "Invited"
                 $0.value = "130"
                 $0.disabled = true
             }
             <<< TextRow() {
-                $0.title = "Number of confirmed invitations"
+                $0.title = "Confirmed"
                 $0.value = "97"
                 $0.disabled = true
             }
             <<< TextRow() {
-                $0.title = "Guests of the Bride"
+                $0.title = "Bride"
                 $0.value = "10"
                 $0.disabled = true
             }
             <<< TextRow() {
-                $0.title = "Guests of the Groom"
+                $0.title = "Groom"
                 $0.value = "10"
                 $0.disabled = true
             }
