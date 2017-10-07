@@ -22,3 +22,9 @@ extension UITableView {
         self.separatorStyle = .singleLine
     }
 }
+
+extension UIColor {
+    class func myTintColor() -> UIColor {
+        return UIColor(red: 0.90, green: 0.15, blue: 0.40, alpha: 1.00)
+    }
+}

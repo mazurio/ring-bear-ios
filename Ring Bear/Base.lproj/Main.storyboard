@@ -185,4 +185,5 @@
         <image name="Home" width="22" height="22"/>
         <image name="Settings" width="22" height="22"/>
     </resources>
+    <color key="tintColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

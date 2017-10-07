@@ -18,9 +18,10 @@
                         <viewControllerLayoutGuide type="bottom" id="Wcb-pa-VSM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h0m-t2-ZMQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Guest" id="dg0-KT-pPf"/>
                 </viewController>
@@ -33,9 +34,10 @@
             <objects>
                 <navigationController storyboardIdentifier="AddEditGuestViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Txm-oV-ycY" customClass="AddEditGuestViewNavigationController" customModule="Ring_Bear" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oky-FW-HP1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Oky-FW-HP1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -47,4 +49,5 @@
             <point key="canvasLocation" x="3536.8000000000002" y="77.811094452773617"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
