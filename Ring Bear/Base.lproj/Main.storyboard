@@ -110,7 +110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcV-ce-7b3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Guest List" image="GuestList" id="2iS-VT-w99"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AIS-T9-KhB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AIS-T9-KhB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -123,13 +123,13 @@
             </objects>
             <point key="canvasLocation" x="750" y="346"/>
         </scene>
-        <!--Home-->
+        <!--My Wedding-->
         <scene sceneID="hk9-6p-ztS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuV-f9-7jO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="My Wedding" image="Home" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ojq-dU-GRl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ojq-dU-GRl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -148,7 +148,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MDE-I3-3D0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="u1w-EL-Lf3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mqh-cX-A1w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mqh-cX-A1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

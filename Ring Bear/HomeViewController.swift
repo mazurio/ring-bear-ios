@@ -10,7 +10,7 @@ class HomeViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+        self.title = "My Wedding"
         
         self.createForm()
     }
