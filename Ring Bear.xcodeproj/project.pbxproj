@@ -269,6 +269,7 @@
 				TargetAttributes = {
 					736299561F643AB100B95AE9 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F2262GQ94A;
 						ProvisioningStyle = Automatic;
 					};
 					7362996C1F643AB200B95AE9 = {
@@ -654,6 +655,7 @@
 			baseConfigurationReference = 5692EB5E4A5F5FB7BD261E4D /* Pods-Ring Bear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F2262GQ94A;
 				INFOPLIST_FILE = "Ring Bear/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mazur.Ring-Bear";
@@ -667,6 +669,7 @@
 			baseConfigurationReference = FFA0F0497FFA238A420AFB00 /* Pods-Ring Bear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F2262GQ94A;
 				INFOPLIST_FILE = "Ring Bear/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mazur.Ring-Bear";
