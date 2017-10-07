@@ -6,7 +6,7 @@ class HomeViewController: FormViewController {
     let realm = try! Realm()
 
     var header: Header? = nil
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,9 +41,9 @@ extension HomeViewController {
         
         form
             +++ headerSection
-            +++ Section("Bride")
+            +++ Section("Our Wedding")
             <<< TextRow() {
-                $0.title = "Name"
+                $0.title = "Name of the Bride"
                 $0.value = "\(s.brideName)"
                 $0.placeholder = "Aldona"
                 $0.onChange { [unowned self] row in
@@ -62,9 +62,8 @@ extension HomeViewController {
                     }
                 }
             }
-            +++ Section("Groom")
             <<< TextRow() {
-                $0.title = "Name"
+                $0.title = "Name of the Groom"
                 $0.value = "\(s.groomName)"
                 $0.placeholder = "Damian"
                 $0.onChange { [unowned self] row in
@@ -81,7 +80,6 @@ extension HomeViewController {
                     self.reloadData()
                 }
             }
-            +++ Section("Wedding")
             <<< DateRow() {
                 $0.title = "Date of the Wedding"
                 $0.value = weddingDateLabel(settings: s)
