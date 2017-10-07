@@ -10,7 +10,7 @@ class HomeViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "My Wedding"
+        self.title = "Our Wedding"
         
         self.createForm()
     }
@@ -41,7 +41,7 @@ extension HomeViewController {
         
         form
             +++ headerSection
-            +++ Section("Our Wedding")
+            +++ Section()
             <<< TextRow() {
                 $0.title = "Name of the Bride"
                 $0.value = "\(s.brideName)"

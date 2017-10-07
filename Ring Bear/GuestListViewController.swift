@@ -44,7 +44,11 @@ extension GuestListViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Our Guests"
+        if (listOfGuests().count > 0) {
+            return "Our Guests"
+        } else {
+            return nil
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

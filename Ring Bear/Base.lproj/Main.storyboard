@@ -131,11 +131,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="346"/>
         </scene>
-        <!--My Wedding-->
+        <!--Our Wedding-->
         <scene sceneID="hk9-6p-ztS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuV-f9-7jO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Wedding" image="Home" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Our Wedding" image="Home" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Ojq-dU-GRl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

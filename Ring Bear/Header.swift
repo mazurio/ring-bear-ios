@@ -41,7 +41,7 @@ class Header: UIView {
                 self.date.text = text
             }
         } else {
-            self.date.text = "Remember to set your wedding date below."
+            self.date.text = "When are you getting married?"
         }
     }
 }
