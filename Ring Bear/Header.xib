@@ -43,6 +43,9 @@
                 <constraint firstItem="cuc-0A-KxH" firstAttribute="top" secondItem="rhd-wV-B6C" secondAttribute="bottom" constant="8" id="xVs-vr-XX2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="title" destination="rhd-wV-B6C" id="I2q-MV-a7c"/>
+            </connections>
             <point key="canvasLocation" x="-86" y="-22"/>
         </view>
     </objects>

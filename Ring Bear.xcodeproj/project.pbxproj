@@ -14,6 +14,8 @@
 		734E97951F87C9290017C630 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E97941F87C9290017C630 /* SettingsViewController.swift */; };
 		734E97971F87D43D0017C630 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 734E97961F87D43D0017C630 /* Header.xib */; };
 		734E97991F87D4900017C630 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E97981F87D4900017C630 /* Header.swift */; };
+		734E97A11F88EDDA0017C630 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E97A01F88EDDA0017C630 /* Settings.swift */; };
+		734E97A31F88EE7E0017C630 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E97A21F88EE7E0017C630 /* Extensions.swift */; };
 		7362995B1F643AB200B95AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362995A1F643AB200B95AE9 /* AppDelegate.swift */; };
 		7362995D1F643AB200B95AE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362995C1F643AB200B95AE9 /* HomeViewController.swift */; };
 		7362995F1F643AB200B95AE9 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362995E1F643AB200B95AE9 /* GuestListViewController.swift */; };
@@ -54,6 +56,8 @@
 		734E97941F87C9290017C630 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		734E97961F87D43D0017C630 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		734E97981F87D4900017C630 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		734E97A01F88EDDA0017C630 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		734E97A21F88EE7E0017C630 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		736299571F643AB200B95AE9 /* Ring Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ring Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7362995A1F643AB200B95AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7362995C1F643AB200B95AE9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -129,11 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				7362995A1F643AB200B95AE9 /* AppDelegate.swift */,
+				734E97A21F88EE7E0017C630 /* Extensions.swift */,
 				7362995C1F643AB200B95AE9 /* HomeViewController.swift */,
 				7362995E1F643AB200B95AE9 /* GuestListViewController.swift */,
 				734E978E1F86B55B0017C630 /* AddEditGuestViewController.swift */,
 				734E97941F87C9290017C630 /* SettingsViewController.swift */,
 				734E97901F86BBF70017C630 /* Guest.swift */,
+				734E97A01F88EDDA0017C630 /* Settings.swift */,
 				736299601F643AB200B95AE9 /* Main.storyboard */,
 				734E97921F86BDF90017C630 /* AddEditGuest.storyboard */,
 				736299651F643AB200B95AE9 /* LaunchScreen.storyboard */,
@@ -486,7 +492,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				734E97911F86BBF70017C630 /* Guest.swift in Sources */,
+				734E97A31F88EE7E0017C630 /* Extensions.swift in Sources */,
 				7362995F1F643AB200B95AE9 /* GuestListViewController.swift in Sources */,
+				734E97A11F88EDDA0017C630 /* Settings.swift in Sources */,
 				7362995B1F643AB200B95AE9 /* AppDelegate.swift in Sources */,
 				734E97991F87D4900017C630 /* Header.swift in Sources */,
 				734E978F1F86B55B0017C630 /* AddEditGuestViewController.swift in Sources */,
