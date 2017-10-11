@@ -7,7 +7,7 @@ target 'Ring Bear' do
 
   # Pods for Ring Bear
   pod 'RealmSwift'
-  pod 'Eureka', '~> 3.0.0'
+  pod 'Eureka', '~> 4.0.1'
 
   target 'Ring BearTests' do
     inherit! :search_paths
@@ -19,4 +19,14 @@ target 'Ring Bear' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+  	if ['Eureka'].include? target.name
+  		target.build_configurations.each do |config|
+  			config.build_settings['SWIFT_VERSION'] = '4.0'
+  		end
+  	end
+  end
 end
